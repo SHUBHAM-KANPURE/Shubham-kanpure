@@ -9,7 +9,7 @@ export default function Header() {
         <div className="s-header__block">
           <div className="s-header__logo">
             <a className="logo" href="#top">
-              <img src="/images/logo.png" width="30" height="30" alt="" />
+              <img src="/images/logo.png" width="30" height="30" alt="Shubham Kanpure logo" />
               <strong>hubham</strong>
             </a>
           </div>
