@@ -42,7 +42,7 @@ const mernProjects = [
 const aiProjects = [
   {
     id: 'ai-merchant-funding',
-    title: 'AI-Powered Merchant Funding & Lead Qualification Automation Platform',
+    title: 'AI-Powered Merchant Funding & Lead Qualification Automation System',
     stack: 'n8n, Zoho CRM, VAPI, Twilio, VICIdial, OpenAI, JavaScript, REST APIs, Webhooks, AI Automation, Prompt Engineering, Zoho Calendar',
     desc: 'Built an end-to-end AI-powered merchant funding automation platform that manages lead ingestion, automated SMS conversations, AI-based lead qualification, appointment scheduling, and live Funding Advisor call transfers. Integrated n8n with Zoho CRM, Twilio, VAPI, and VICIdial to automate multi-step communication workflows, maintain conversation context, dynamically manage caller IDs, and route qualified merchants to live advisors.',
   },
