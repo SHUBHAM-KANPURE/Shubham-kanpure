@@ -21,7 +21,12 @@ export const aiProjects = [
       alt: 'Workflow diagram: a new lead in Zoho CRM triggers an n8n webhook, an initial SMS is sent through Twilio, and the customer reply starts an AI qualification flow (business bank account and monthly deposits), then either schedules a call or places an immediate Vapi call to a Funding Advisor.',
     } },
   { title: 'Voice Recruitment Agent', tags: ['n8n', 'VAPI', 'GoHighLevel', 'OpenAI', 'Twilio'],
-    desc: 'AI voice agent that interviews leads, scores answers in real time and triggers CRM booking or disqualification.' },
+    desc: 'AI voice agent that interviews leads, scores answers in real time and triggers CRM booking or disqualification.',
+    diagram: {
+      src: '/images/workflows/Voice%20Recruitment%20Agent%20Workflow.png',
+      title: 'Voice Recruitment Agent Workflow',
+      alt: 'Workflow diagram for the AI voice recruitment agent that interviews leads, scores answers and triggers CRM booking or disqualification.',
+    } },
   { title: 'Invoice & Accounting Automation', tags: ['n8n', 'OpenAI', 'Gmail API', 'Google Sheets', 'Holded'],
     desc: 'Extracts and validates invoice data from emails and PDFs, matches suppliers and creates purchase invoices automatically.',
     diagram: {
