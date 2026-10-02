@@ -11,11 +11,11 @@
 .car-btn:hover { background: var(--text); color: var(--bg); border-color: var(--text); transform: translateY(-2px); }
 .car-btn:active { transform: scale(.94); }
 
-.carousel { margin: 0 -24px; outline: none; }
+.carousel { margin: 0; outline: none; }
 .carousel:focus-visible { outline: 2px solid var(--text); outline-offset: 6px; border-radius: 16px; }
 .car-track {
-  display: flex; gap: 26px; overflow-x: auto; padding: 16px 24px 34px; cursor: grab;
-  scroll-snap-type: x mandatory; scroll-behavior: smooth; scroll-padding-left: 24px; scrollbar-width: none;
+  display: flex; gap: 26px; overflow-x: auto; padding: 16px 0 34px; cursor: grab;
+  scroll-snap-type: x mandatory; scroll-behavior: smooth; scroll-padding-left: 0; scrollbar-width: none;
 }
 .car-track::-webkit-scrollbar { display: none; }
 .car-track.is-dragging { scroll-snap-type: none; scroll-behavior: auto; cursor: grabbing; user-select: none; }
@@ -23,7 +23,7 @@
 
 /* project card */
 .project {
-  flex: 0 0 min(560px, 86%); scroll-snap-align: start; user-select: none;
+  flex: 0 0 calc((100% - 26px) / 2); scroll-snap-align: start; user-select: none;
   display: block; position: relative; overflow: hidden; border-radius: 24px;
   transition: transform .25s var(--ease), border-color .3s, box-shadow .3s;
 }
@@ -57,8 +57,20 @@
 @keyframes dot-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 @media (max-width: 860px) {
+  .carousel { margin: 0 -20px; }
+  .car-track { padding-inline: 20px; scroll-padding-left: 20px; }
   .works-head { align-items: flex-start; }
   .car-count { display: none; }
   .project { flex-basis: 88%; }
 }
+@media (max-width: 700px) { .car-ctrl { display: none; } }
 @media (prefers-reduced-motion: reduce) { .car-track { scroll-behavior: auto; } }
+
+@media (max-width: 700px) {
+  .carousel { margin-inline: 0; }
+  .car-track { padding-inline: 0; scroll-padding-left: 0; }
+  .project { flex-basis: 100%; min-width: 0; }
+  .meta { padding: 18px; gap: 12px; }
+  .meta > div { min-width: 0; }
+  .meta h3 { font-size: 1.3rem; }
+}

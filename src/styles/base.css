@@ -13,7 +13,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 ul { list-style: none; padding: 0; }
 :focus-visible { outline: 2px solid var(--text); outline-offset: 3px; border-radius: 6px; }
 
-.section { max-width: var(--max-w); margin: auto; padding: 120px 24px 20px; }
+.section { max-width: var(--max-w); margin: auto; padding: 120px 20px 20px; }
 .eyebrow {
   color: var(--accent); font: 500 .9rem var(--font-display);
   letter-spacing: .14em; text-transform: uppercase; margin-bottom: 12px;
@@ -28,4 +28,12 @@ ul { list-style: none; padding: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Let section content shrink and wrap within narrow viewports. */
+.hero > *, .section > *, .ai-grid > *, .skill-grid > *, .edu > * { min-width: 0; }
+.hero, .section { width: 100%; overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .section { padding-top: 80px; }
+  h2 { font-size: clamp(1.75rem, 7vw, 2.4rem); margin-bottom: 32px; }
 }

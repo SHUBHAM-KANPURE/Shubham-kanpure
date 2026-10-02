@@ -19,5 +19,5 @@ export const links = {
 export const stats = [
   { n: 3, suffix: '+', label: 'Years of experience' },
   { n: 10, suffix: '+', label: 'Projects shipped' },
-  { n: 50, suffix: 'k+', label: 'Lines of code' },
+  { n: 4, suffix: '+', label: 'Workflows automated' },
 ]

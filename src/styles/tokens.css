@@ -4,7 +4,7 @@
   --font-display: 'Space Grotesk Variable', system-ui, sans-serif;
   --ease: cubic-bezier(.2, .8, .2, 1);
   --ease-out: cubic-bezier(.22, 1, .36, 1);
-  --max-w: 1180px;
+  --max-w: 1320px;
 
   /* surfaces + text */
   --bg: #e6e7ea;

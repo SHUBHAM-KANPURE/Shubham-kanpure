@@ -51,7 +51,7 @@ export default function Hero() {
       <div className="hero-media fade-up" style={{ '--d': '0.05s', '--y': '24px' }}>
         <div className="ring" />
         <img src={photo.src} width={photo.width} height={photo.height} alt={profile.name} fetchpriority="high" decoding="async" />
-        <div className="badge"><small>Currently</small><b>{current.title}</b><span>{current.org}</span></div>
+        <div className="badge"><small>Currently</small><b>{current.title}</b></div>
       </div>
     </section>
   )

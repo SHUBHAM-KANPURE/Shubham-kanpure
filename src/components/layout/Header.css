@@ -1,6 +1,6 @@
 .header {
   position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 50;
-  width: min(1100px, calc(100% - 28px));
+  width: min(var(--max-w), 100%);
   display: flex; justify-content: space-between; align-items: center;
   padding: 10px 20px; border-radius: 999px; border: 1px solid transparent;
   transition: background-color .3s, border-color .3s, box-shadow .3s;
@@ -36,4 +36,11 @@
   }
   .header nav.is-open { opacity: 1; pointer-events: auto; transform: none; }
   .header nav a { padding: 13px 16px; font-size: 1rem; border-radius: 12px; }
+}
+
+@media (max-width: 700px) {
+  .header { gap: 8px; }
+  .brand { min-width: 0; gap: 6px; white-space: normal; font-size: clamp(.78rem, 3.3vw, .98rem); }
+  .brand img { flex-shrink: 0; }
+  .header-right { flex-shrink: 0; gap: 6px; }
 }
