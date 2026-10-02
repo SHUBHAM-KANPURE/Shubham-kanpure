@@ -1,0 +1,64 @@
+.works-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 36px; }
+.works-head h2 { margin-bottom: 0; }
+.car-ctrl { display: flex; align-items: center; gap: 10px; }
+.car-count { font: 500 .95rem var(--font-display); color: var(--muted); margin-right: 8px; }
+.car-count b { color: var(--text); font-size: 1.15rem; }
+.car-btn {
+  width: 46px; height: 46px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--surface);
+  display: grid; place-items: center; font-size: 1.15rem;
+  transition: transform .25s var(--ease), background-color .25s, color .25s, border-color .25s;
+}
+.car-btn:hover { background: var(--text); color: var(--bg); border-color: var(--text); transform: translateY(-2px); }
+.car-btn:active { transform: scale(.94); }
+
+.carousel { margin: 0 -24px; outline: none; }
+.carousel:focus-visible { outline: 2px solid var(--text); outline-offset: 6px; border-radius: 16px; }
+.car-track {
+  display: flex; gap: 26px; overflow-x: auto; padding: 16px 24px 34px; cursor: grab;
+  scroll-snap-type: x mandatory; scroll-behavior: smooth; scroll-padding-left: 24px; scrollbar-width: none;
+}
+.car-track::-webkit-scrollbar { display: none; }
+.car-track.is-dragging { scroll-snap-type: none; scroll-behavior: auto; cursor: grabbing; user-select: none; }
+.car-track.is-dragging .project { pointer-events: none; }
+
+/* project card */
+.project {
+  flex: 0 0 min(560px, 86%); scroll-snap-align: start; user-select: none;
+  display: block; position: relative; overflow: hidden; border-radius: 24px;
+  transition: transform .25s var(--ease), border-color .3s, box-shadow .3s;
+}
+.project::after {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s;
+  background: radial-gradient(320px circle at 50% 30%, var(--card-glow), transparent 60%);
+}
+.project:hover { transform: translateY(-4px); border-color: var(--hover-border); box-shadow: var(--shadow-card-hover); }
+.project:hover::after { opacity: 1; }
+/* the frame matches the screenshots' shape (~2.1:1) so the whole page header is visible */
+.shot { aspect-ratio: 1200 / 573; overflow: hidden; background: var(--shot-bg); }
+.shot img { width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform 1.4s var(--ease); }
+.project:hover .shot img { transform: scale(1.025); }
+.meta { display: flex; justify-content: space-between; gap: 16px; padding: 22px 24px 26px; }
+.meta small { color: var(--accent); font-weight: 500; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; }
+.meta h3 { font-size: 1.5rem; margin: 2px 0 6px; }
+.meta p { color: var(--muted); font-size: .95rem; line-height: 1.55; }
+.arrow {
+  flex: none; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%;
+  border: 1px solid var(--line); transition: background-color .3s, color .3s, border-color .3s, transform .3s;
+}
+.project:hover .arrow { background: var(--accent); color: var(--on-accent); border-color: var(--accent); transform: rotate(45deg); }
+
+/* dots double as the autoplay timer */
+.car-dots { display: flex; justify-content: center; gap: 8px; margin-top: -6px; }
+.car-dots button { position: relative; overflow: hidden; width: 8px; height: 8px; padding: 0; border-radius: 99px; background: var(--line); transition: width .35s var(--ease), background-color .25s; }
+.car-dots button:hover { background: var(--muted); }
+.car-dots button.is-on { width: 30px; background: var(--line); }
+.car-dots button.is-on::after { content: ''; position: absolute; inset: 0; background: var(--text); transform-origin: left; }
+.car-dots.is-playing button.is-on::after { animation: dot-fill 3s linear forwards; }
+@keyframes dot-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+@media (max-width: 860px) {
+  .works-head { align-items: flex-start; }
+  .car-count { display: none; }
+  .project { flex-basis: 88%; }
+}
+@media (prefers-reduced-motion: reduce) { .car-track { scroll-behavior: auto; } }

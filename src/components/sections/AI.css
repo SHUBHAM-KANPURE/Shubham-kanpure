@@ -1,0 +1,27 @@
+.ai-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.ai-card {
+  position: relative; overflow: hidden; height: 100%; padding: 30px; border-radius: 24px;
+  background: var(--card-ai); transition: transform .35s var(--ease), border-color .35s, box-shadow .35s;
+}
+.ai-card:hover { transform: translateY(-6px); border-color: var(--hover-border); box-shadow: var(--shadow-card-hover); }
+.ai-card .num {
+  position: absolute; top: 14px; right: 22px; font: 700 3.2rem var(--font-display);
+  color: transparent; -webkit-text-stroke: 1px var(--num-stroke);
+}
+.ai-card h3 { font-size: 1.35rem; margin-bottom: 10px; max-width: 80%; }
+.ai-card p { color: var(--muted); font-size: .96rem; }
+@media (max-width: 860px) { .ai-grid { grid-template-columns: 1fr; } }
+
+/* "View workflow" row (only on projects that have a diagram) */
+.flow-btn {
+  display: flex; align-items: center; gap: 14px; width: 100%; margin-top: 18px; padding: 8px 16px 8px 8px;
+  border: 1px solid var(--line); border-radius: 14px; background: var(--surface);
+  transition: border-color .25s, background-color .25s, transform .25s var(--ease);
+}
+.flow-btn:hover { border-color: var(--hover-border); transform: translateY(-2px); }
+.flow-btn img { flex: none; width: 64px; height: 43px; object-fit: cover; object-position: top left; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
+.flow-btn span { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.35; }
+.flow-btn b { font: 600 .92rem var(--font-display); }
+.flow-btn small { color: var(--muted); font-size: .78rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.flow-btn i { font-style: normal; color: var(--muted); transition: transform .25s var(--ease), color .25s; }
+.flow-btn:hover i { transform: translate(2px, -2px); color: var(--text); }

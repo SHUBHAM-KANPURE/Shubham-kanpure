@@ -1,0 +1,20 @@
+.progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 100; background: var(--progress); transform: scaleX(0); transform-origin: left; will-change: transform; }
+.bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
+
+/* soft glows: radial gradients instead of blur() filters, which are far cheaper to paint */
+.blob {
+  position: absolute; border-radius: 50%; opacity: var(--blob-opacity);
+  background: radial-gradient(closest-side, var(--c), transparent);
+  animation: drift 18s ease-in-out infinite alternate; will-change: transform;
+}
+.blob-1 { --c: var(--blob-1); width: 760px; height: 760px; top: -22%; left: -18%; }
+.blob-2 { --c: var(--blob-2); width: 660px; height: 660px; bottom: -26%; right: -14%; animation-delay: -6s; }
+.blob-3 { --c: var(--blob-3); width: 520px; height: 520px; top: 34%; left: 52%; animation-delay: -12s; opacity: calc(var(--blob-opacity) * .7); }
+@keyframes drift { to { transform: translate3d(70px, 50px, 0) scale(1.15); } }
+
+.grid {
+  position: absolute; inset: 0; opacity: var(--grid-opacity); background-size: 56px 56px;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse at 50% 30%, #000 20%, transparent 75%);
+}
+.spot { --mx: 50vw; --my: 30vh; position: absolute; inset: 0; background: radial-gradient(420px circle at var(--mx) var(--my), var(--spot), transparent 60%); }

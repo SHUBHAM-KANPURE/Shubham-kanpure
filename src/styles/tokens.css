@@ -1,0 +1,106 @@
+/* Design tokens. Components only read these variables, so dark mode is just this block changing. */
+:root {
+  --font-body: 'Inter Variable', system-ui, sans-serif;
+  --font-display: 'Space Grotesk Variable', system-ui, sans-serif;
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --max-w: 1180px;
+
+  /* surfaces + text */
+  --bg: #e6e7ea;
+  --surface: rgba(255, 255, 255, .55);
+  --card: rgba(255, 255, 255, .6);
+  --card-ai: linear-gradient(160deg, #fff, rgba(255, 255, 255, .6));
+  --glass: rgba(236, 237, 240, .8);
+  --glass-strong: rgba(255, 255, 255, .88);
+  --line: rgba(30, 34, 44, .13);
+  --text: #1b1e26;
+  --muted: #555b6b;
+  --accent: #374151;
+  --accent-2: #6b7280;
+  --accent-3: #1f2937;
+  --on-accent: #fff;
+
+  /* effects */
+  --shadow-card: 0 1px 2px rgba(16, 16, 24, .05), 0 10px 30px -14px rgba(16, 16, 24, .12);
+  --shadow-card-hover: 0 18px 44px -16px rgba(55, 65, 81, .28);
+  --shadow-glass: 0 8px 30px -14px rgba(16, 16, 24, .18);
+  --shadow-badge: 0 12px 30px -14px rgba(16, 16, 24, .3);
+  --shadow-photo: 0 30px 80px -24px rgba(55, 65, 81, .45);
+  --hover-border: rgba(55, 65, 81, .5);
+  --card-glow: rgba(55, 65, 81, .1);
+  --shot-bg: #d4d6db;
+  --num-stroke: rgba(16, 16, 24, .2);
+  --dot: #6b7280;
+  --dot-glow: 0 0 14px #6b7280;
+  --marquee-dot: #374151;
+  --progress: linear-gradient(90deg, #1f2937, #6b7280);
+  --grad-text: linear-gradient(110deg, #0f172a, #334155 70%, #475569);
+
+  /* buttons + tags */
+  --btn-bg: linear-gradient(110deg, #1f2937, #4b5563);
+  --on-btn: #fff;
+  --btn-shadow: 0 10px 30px -10px rgba(31, 41, 55, .5);
+  --btn-shadow-hover: 0 14px 34px -10px rgba(31, 41, 55, .55);
+  --shine: rgba(255, 255, 255, .28);
+  --tag-bg: rgba(55, 65, 81, .08);
+  --tag-border: rgba(55, 65, 81, .25);
+  --tag-text: #1f2937;
+
+  /* ambient background */
+  --blob-1: #9ca3af;
+  --blob-2: #cbd5e1;
+  --blob-3: #94a3b8;
+  --blob-opacity: .45;
+  --grid-opacity: .5;
+  --spot: rgba(55, 65, 81, .16);
+  --ring-opacity: .35;
+}
+
+:root[data-theme='dark'] {
+  --bg: #121316;
+  --surface: rgba(255, 255, 255, .05);
+  --card: rgba(255, 255, 255, .045);
+  --card-ai: linear-gradient(160deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .02));
+  --glass: rgba(18, 19, 22, .8);
+  --glass-strong: rgba(30, 32, 38, .88);
+  --line: rgba(255, 255, 255, .12);
+  --text: #ecedf0;
+  --muted: #9ca1ae;
+  --accent: #d1d5db;
+  --accent-2: #9ca3af;
+  --accent-3: #f3f4f6;
+  --on-accent: #111827;
+
+  --shadow-card: 0 10px 30px -14px rgba(0, 0, 0, .6);
+  --shadow-card-hover: 0 18px 44px -16px rgba(255, 255, 255, .12);
+  --shadow-glass: 0 8px 30px -14px rgba(0, 0, 0, .6);
+  --shadow-badge: 0 12px 30px -14px rgba(0, 0, 0, .6);
+  --shadow-photo: 0 30px 80px -24px rgba(0, 0, 0, .8);
+  --hover-border: rgba(255, 255, 255, .3);
+  --card-glow: rgba(255, 255, 255, .08);
+  --shot-bg: #1b1d22;
+  --num-stroke: rgba(255, 255, 255, .22);
+  --dot: #d1d5db;
+  --dot-glow: 0 0 14px rgba(255, 255, 255, .35);
+  --marquee-dot: #6b7280;
+  --progress: linear-gradient(90deg, #f3f4f6, #9ca3af);
+  --grad-text: linear-gradient(110deg, #fff, #e5e7eb 70%, #cbd5e1);
+
+  --btn-bg: linear-gradient(110deg, #f3f4f6, #cbd5e1);
+  --on-btn: #111827;
+  --btn-shadow: 0 10px 30px -10px rgba(255, 255, 255, .25);
+  --btn-shadow-hover: 0 14px 34px -10px rgba(255, 255, 255, .3);
+  --shine: rgba(255, 255, 255, .55);
+  --tag-bg: rgba(255, 255, 255, .07);
+  --tag-border: rgba(255, 255, 255, .18);
+  --tag-text: #e5e7eb;
+
+  --blob-1: #4b5563;
+  --blob-2: #374151;
+  --blob-3: #6b7280;
+  --blob-opacity: .5;
+  --grid-opacity: .3;
+  --spot: rgba(255, 255, 255, .06);
+  --ring-opacity: .18;
+}

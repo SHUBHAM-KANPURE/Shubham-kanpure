@@ -1,0 +1,55 @@
+/* Shared UI: reveal-on-scroll, buttons, tags, cards. */
+
+/* reveal */
+.reveal {
+  opacity: 0; transform: translateY(32px);
+  transition: opacity .7s var(--ease-out) var(--d, 0s), transform .7s var(--ease-out) var(--d, 0s);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* entrance animation for above-the-fold content */
+@keyframes fade-up { from { opacity: 0; transform: translateY(var(--y, 16px)); } to { opacity: 1; transform: none; } }
+.fade-up { animation: fade-up .7s var(--ease-out) var(--d, 0s) both; }
+
+/* buttons */
+.btn {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 28px; border-radius: 12px;
+  font: 600 .98rem var(--font-display); letter-spacing: .005em;
+  transition: transform .25s var(--ease), box-shadow .25s, background-color .25s, color .25s, border-color .25s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: scale(.98); transition-duration: .08s; }
+.btn::before {
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(105deg, transparent 30%, var(--shine) 50%, transparent 70%);
+  transform: translateX(-120%); transition: transform .7s var(--ease);
+}
+.btn:hover::before { transform: translateX(120%); }
+.btn-arrow { display: inline-block; transition: transform .3s var(--ease); }
+.btn:hover .btn-arrow { transform: translateX(4px); }
+
+.btn--primary { background: var(--btn-bg); color: var(--on-btn); box-shadow: var(--btn-shadow); }
+.btn--primary:hover { box-shadow: var(--btn-shadow-hover); }
+
+.btn--ghost { border: 1.5px solid var(--line); color: var(--text); }
+.btn--ghost::before { display: none; }
+.btn--ghost::after {
+  content: ''; position: absolute; inset: 0; z-index: -2; background: var(--text);
+  transform: scaleY(0); transform-origin: bottom; transition: transform .3s var(--ease);
+}
+.btn--ghost:hover { color: var(--bg); border-color: var(--text); }
+.btn--ghost:hover::after { transform: scaleY(1); }
+
+/* tags */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.tags span {
+  font-size: .78rem; padding: 4px 11px; border-radius: 99px;
+  background: var(--tag-bg); border: 1px solid var(--tag-border); color: var(--tag-text);
+}
+
+/* card surface shared by projects, AI, skills, education */
+.card-surface {
+  border: 1px solid var(--line); background: var(--card); box-shadow: var(--shadow-card);
+}

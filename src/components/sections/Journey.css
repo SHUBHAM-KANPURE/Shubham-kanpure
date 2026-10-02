@@ -1,0 +1,13 @@
+.timeline { position: relative; padding-left: 34px; margin-left: 8px; border-left: 1px solid var(--line); }
+.t-item { position: relative; padding-bottom: 38px; }
+.dot { position: absolute; left: -42px; top: 6px; width: 15px; height: 15px; border-radius: 50%; background: var(--bg); border: 3px solid var(--dot); box-shadow: var(--dot-glow); }
+.t-item small { color: var(--muted); }
+.t-item h3 { font-size: 1.4rem; }
+.t-item b { color: var(--accent); font-weight: 500; }
+.t-item p { color: var(--muted); margin-top: 6px; max-width: 640px; }
+.edu { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 20px; }
+.edu-card { display: flex; gap: 18px; align-items: center; padding: 20px; border-radius: 20px; }
+.edu-card img { width: 64px; height: 64px; border-radius: 14px; object-fit: cover; }
+.edu-card h4 { font-size: 1.1rem; }
+.edu-card p { color: var(--muted); font-size: .88rem; line-height: 1.45; }
+@media (max-width: 860px) { .edu { grid-template-columns: 1fr; } }

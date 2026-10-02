@@ -1,0 +1,11 @@
+.marquee {
+  overflow: hidden; contain: paint; transform: translateZ(0);
+  border-block: 1px solid var(--line); background: var(--surface); padding: 18px 0;
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+/* padding (not gap) on each item keeps one set exactly half the track width => seamless loop */
+.marquee-track { display: flex; width: max-content; animation: marquee 45s linear infinite; will-change: transform; backface-visibility: hidden; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee-track span { display: flex; gap: 34px; align-items: center; padding-right: 34px; font: 600 1.3rem var(--font-display); color: var(--muted); white-space: nowrap; }
+.marquee-track em { color: var(--marquee-dot); font-style: normal; font-size: .9rem; }
+@keyframes marquee { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }

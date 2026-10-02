@@ -1,0 +1,8 @@
+.theme-toggle {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 1px solid var(--line); background: var(--surface); color: var(--text);
+  display: grid; place-items: center; transition: background .25s;
+}
+.theme-toggle .icon { width: 18px; height: 18px; grid-area: 1 / 1; transition: transform .5s var(--ease), opacity .3s; }
+:root:not([data-theme='dark']) .theme-toggle .moon { opacity: 0; transform: rotate(-90deg) scale(.4); }
+:root[data-theme='dark'] .theme-toggle .sun { opacity: 0; transform: rotate(90deg) scale(.4); }
