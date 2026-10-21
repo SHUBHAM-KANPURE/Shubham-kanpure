@@ -19,8 +19,8 @@
 |---|---|
 | [Testuity](https://testuity.com/) | IQ testing platform measuring verbal, mathematical and spatial reasoning |
 | [WithZibi](https://withzibi-frontend.ibrcloud.com/) | Browser-based cognitive test for memory, attention and mental agility |
-| [ConsumerLawDispute.ai](https://www.consumerlawdispute.ai/) | One line about what it does |
-| [Ortek](https://ortek-frontend.ibrcloud.com/) | One line about what it does |
+| [ConsumerLawDispute.ai](https://www.consumerlawdispute.ai/) | AI-powered dispute software helping consumers and credit repair professionals rebuild and restore credit |
+| [Ortek](https://ortek-frontend.ibrcloud.com/) | Inventory dashboard to track, manage and optimize stock and operations in real time |
 
 ## 🤖 AI Automations & Workflows
 - **Merchant Funding & Lead Qualification:** AI SMS conversations, qualification, scheduling and live call transfers (n8n, VAPI, Twilio, OpenAI)
