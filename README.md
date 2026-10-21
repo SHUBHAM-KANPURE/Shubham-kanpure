@@ -1,45 +1,31 @@
-# Shubham Kanpure — Portfolio
+# Hi, I'm Shubham 👋
 
-React 18 + Vite. No UI/animation libraries: animations are CSS, scroll reveals share one
-`IntersectionObserver`, fonts are self-hosted. Light/dark theme, endless auto-playing projects carousel,
-mobile menu.
+**Full-Stack Developer (MERN) & AI Automation Engineer** | Indore, India
+3+ years building scalable web apps and AI-powered workflows.
 
-## Run
-```bash
-npm install
-npm run dev       # http://localhost:5173
-npm run build     # production build -> dist/
-npm run preview   # serve the build locally
-```
+🌐 [Portfolio](https://shubham-kanpure.vercel.app) · 💼 [LinkedIn](https://www.linkedin.com/in/shubham-kanpure-702124233)
 
-## Where things live
-```
-src/
-  data/          all content — edit these, not components
-    profile.js     name, headline, tagline, links, stats
-    projects.js    product projects + AI/automation projects
-    skills.js      skill groups + the scrolling ticker
-    career.js      experience + education
-    sections.js    section order, nav labels, titles (numbering is generated from this)
-  components/
-    ui/            Button, Reveal, SectionHeader, Tags (reusable pieces)
-    layout/        Header, ThemeToggle, Background
-    sections/      Hero, Marquee, Works, AI, Skills, Journey, Contact (each with its own .css)
-  hooks/         useTheme, useCountUp, useLoopCarousel
-  lib/observe.js shared IntersectionObserver + reduced-motion helper
-  styles/
-    tokens.css     colours/shadows for light + dark  <- change the theme here
-    base.css       reset, typography, layout helpers
-    ui.css         buttons, tags, reveal animation
-public/          images (WebP), résumé PDF, sitemap.xml, robots.txt
-vercel.json      long-term caching for /assets and /images + security headers
-```
+## 🛠 Tech Stack
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?logo=openai&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n-EA4B71?logo=n8n&logoColor=white)
 
-## Common tasks
-- **Add a project:** add an object to `src/data/projects.js` and a 1200px-wide `.webp` to `public/images/folio/`.
-- **Add a section:** create it in `components/sections/`, add an entry to `data/sections.js` (nav + numbering follow automatically), render it in `App.jsx`.
-- **Change colours:** edit the variables in `styles/tokens.css` (`:root` = light, `[data-theme='dark']` = dark).
-- **Images:** export as WebP at the displayed size (~2x). Give every `<img>` `width`/`height` to avoid layout shift.
+## 🚀 Products I've Shipped
+| Project | What it does |
+|---|---|
+| [Testuity](https://testuity.com/) | IQ testing platform measuring verbal, mathematical and spatial reasoning |
+| [WithZibi](https://withzibi-frontend.ibrcloud.com/) | Browser-based cognitive test for memory, attention and mental agility |
+| [ConsumerLawDispute.ai](https://www.consumerlawdispute.ai/) | One line about what it does |
+| [Ortek](https://ortek-frontend.ibrcloud.com/) | One line about what it does |
 
-## Deploy (Vercel)
-Import the repo — Vercel auto-detects Vite (build `npm run build`, output `dist`).
+## 🤖 AI Automations & Workflows
+- **Merchant Funding & Lead Qualification:** AI SMS conversations, qualification, scheduling and live call transfers (n8n, VAPI, Twilio, OpenAI)
+- **Voice Recruitment Agent:** AI voice agent that interviews and scores candidates, then triggers CRM booking (n8n, VAPI, GoHighLevel)
+- **Invoice & Accounting Automation:** extracts and validates invoice data from emails and PDFs (n8n, OpenAI, Gmail API)
+- **Property Management & Guest Comms:** AI guest messaging and damage reports routed to Trello and WhatsApp (n8n, Claude AI)
+
+👉 Full details and workflow diagrams: [shubham-kanpure.vercel.app](https://shubham-kanpure.vercel.app)
